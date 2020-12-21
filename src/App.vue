@@ -1,19 +1,30 @@
 <template>
-  <h2 v-bind:innerHTML="val" v-bind:class="className"></h2>
+ <!--<h2 v-bind:innerHTML="val" v-bind:class="className"></h2>
   <button v-on:click="testing('My Message')">Click Me </button>
   <button v-on:click="changeColor">{{ btnText }}</button>
   <ul>
     <li v-for="emp in employees" v-bind:key="emp.id"> {{ emp.name }}</li>
-  </ul>
+  </ul> -->
 
+<div>
+
+<Contact name='Nidhi' />
+
+<Contact name='Neha' email='user@gmail.com'/>
+
+<Contact  email='user@gmail.com' contacted='1' />
+</div>
 
 </template>
 
 <script>
 
-
+import Contact from './components/contact.vue';
 export default {
   name: 'App',
+  components: {
+    Contact
+  },
 
   data(){
     return {
@@ -47,6 +58,8 @@ export default {
     
     }
   },
+
+
 
   
   methods: {
